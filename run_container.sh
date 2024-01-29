@@ -1,2 +1,2 @@
 #!/bin/env bash
- docker run botplayer
+docker run botplayer
