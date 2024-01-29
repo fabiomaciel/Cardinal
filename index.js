@@ -15,7 +15,7 @@ const Discord = require("discord.js");
   REST,
   Routes,
 } */
-const config = require("./config.json");
+const config = require("./config.js");
 const CommandHandler = require("./utility/CommandHandler.js");
 
 const util = {};
