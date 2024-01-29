@@ -48,7 +48,6 @@ class CardinalBot {
       } else {
         const userExists = await this.checkUserData(message.author.id);
         if(userExists) {
-          expService.generateExp(message.author);
           economyService.generateCurrency(message.author);
         } else {
           this.util.dataHandler.initializeUserInfo(message.author, message.guild.id);
@@ -62,7 +61,6 @@ class CardinalBot {
     this.client.on(this.util.lib.Events.InteractionCreate, async (interaction) => {
       const userExists = await this.checkUserData(interaction.user.id);
       if(userExists) {
-        expService.generateExp(interaction.user);
         economyService.generateCurrency(interaction.user);
       } else {
         this.util.dataHandler.initializeUserInfo(interaction.user, interaction.guildId);
